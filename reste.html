@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Image/logo_N.png" type="images/x-icon"/>
+  <title>Neytiri-Personnages</title>
+  <link rel="stylesheet" href="styletest.css" id="linkStyle">
+  <link rel="stylesheet" href="CSS/reste.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="CSS/loader.css">   <!--animation de chargement-->
+</head>
+
+<body>
+
+<div class="sidebar">                     <!--menu vertical  /  z-index = 3-->
+    <div class="logo-details">
+		<i class='bx bx-smile icon'></i>
+			<div class="logo_name">NEYTIRI</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+		<li>
+			<i class='bx bx-search' ></i>
+			<input type="text" placeholder="Rechercher">
+			<span class="tooltip">Rechercher</span>
+		</li>
+		<li>
+			<a href="index.html">
+			<i class='bx bx-home'></i>
+			<span class="links_name">Accueil</span>
+			</a>
+			<span class="tooltip">Accueil</span>
+		</li>
+		<li>
+			<a href="manga.html">
+			<i class='bx bx-book' ></i>
+			<span class="links_name">Manga</span>
+			</a>
+			<span class="tooltip">Manga</span>
+		</li>
+		<li>
+			<a href="jeu.html">
+			<i class='bx bx-joystick' ></i>
+			<span class="links_name">Jeu</span>
+			</a>
+			<span class="tooltip">Jeu</span>
+		</li>
+		<li>
+			<a href="reste.html#personnages">
+			<i class='bx bx-user' ></i>
+			<span class="links_name">Personnages</span>
+			</a>
+			<span class="tooltip">Personnages</span>
+		</li>
+		<li>
+			<a href="reste.html#monde">
+			<i class='bx bx-world' ></i>
+			<span class="links_name">Monde</span>
+			</a>
+			<span class="tooltip">Monde</span>
+		</li>
+		<li>
+			<a href="reste.html#creatures">
+			<i class='bx bx-ghost' ></i>
+			<span class="links_name">Créatures</span>
+			</a>
+			<span class="tooltip">Créatures</span>
+		</li>
+		<li onclick="toggle();">
+			<a href='#'>
+			<i class='bx bx-cog' ></i>
+			<span class="links_name">Paramètres</span>
+			</a>
+			<span class="tooltip">Paramètres</span>
+		</li>
+		<li class="download">
+			<div class="download-details">
+				<div class="name_job">
+					<div class="name">Télécharger</div>
+					<div class="job">60 Mo</div>
+				</div>
+			</div>
+			<i class='bx bx-download' id="log_out" ></i>
+		</li>
+    </ul>
+</div>
+
+
+<section class="home-section">              <!--Contenu a droite du menu  /  z-index = 2-->
+
+	<div class='settings'>                        <!--Pop up paramètre  /  z-index = 3-->
+		<ul>
+			<li onclick="changeClass();">
+				<a href='#' id="micro">
+				<i class='bx bx-microphone-off'></i>
+				</a>
+				<audio id="musique">
+					<source src="Musiques/rival_throne.mp3" type="audio/mp3">
+				</audio>
+			</li>
+			<li onclick="ChangeStyle();">
+				<a href='#' id="theme">
+				<i class='bx bx-toggle-right'></i>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	
+	<div class="title-page" id="top-page"><h2>Neytiri<h2></div>
+
+	<img src="https://th.bing.com/th/id/R.740b480590d08945f8faa80eb54a0c15?rik=yE5j3Js2IGUPSA&pid=ImgRaw&r=0">
+
+	<div class="perso">
+		<div class="title-part" id="personnages">
+			<h2>Personnages<h2>
+		</div>
+		<div class="caractere">
+		</div>
+	</div>
+	
+	<div class="world">
+		<div class="title-part" id="monde">
+			<h2>Monde</h2>
+		</div>
+		<div class="all-region">
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190903/2019090314530331649.jpg"><p>Arima</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315422222897.jpg"><p>Tayaki</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315452396673.jpg"><p>Cryos</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190903/2019090314530331649.jpg"><p>Yui</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315422222897.jpg"><p>Moya</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315452396673.jpg"><p>Impa</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190903/2019090314530331649.jpg"><p>Gaïa</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315422222897.jpg"><p>Octi</p></div>
+			<div class="region"><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315452396673.jpg"><p>Hydilesia</p></div>
+		</div>
+	</div>
+	
+	<div class="mobs">
+		<div class="title-part" id="creatures">
+			<h2>Créatures<h2>
+		</div>
+		<div class="caractere">
+		</div>
+	</div>
+	
+	<footer>                               <!--Footer  /  debut a 800px-->
+		<div class='footer-content'>
+			<h3>Makito</h3><br>
+			<p>Nous vous attendions, bienvenue sur le site officiel de Neytiri</p><br>
+			<ul class='socials'>
+				<li><a href='#'><i class="bx bxl-facebook-circle"></i></a></li>
+				<li><a href='#'><i class="bx bxl-twitter"></i></a></li>
+				<li><a href='#'><i class="bx bxl-discord"></i></a></li>
+				<li><a href='#'><i class="bx bxl-youtube"></i></a></li>
+				<li><a href='#'><i class="bx bxl-instagram-alt"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+		<P>copyright &copy;2021 Makito.designed by <span>mathieu</span></P>
+		</div>
+		<style>
+		footer{top: 100%; margin-top: 10vh;}
+		</style>
+	</footer>
+ 
+	
+</section>
+
+<script type="text/javascript" src="Javascript/main.js"></script>
+
+</body>
+</html>

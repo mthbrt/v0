@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Image/logo_N.png" type="images/x-icon"/>
+  <title>Neytiri-Jeu</title>
+  <link rel="stylesheet" href="styletest.css" id="linkStyle">
+  <link rel="stylesheet" href="CSS/jeu.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="CSS/loader.css">   <!--animation de chargement-->
+</head>
+
+<body>
+
+<div class="sidebar">                     <!--menu vertical-->
+    <div class="logo-details">
+		<i class='bx bx-smile icon'></i>
+			<div class="logo_name">NEYTIRI</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+		<li>
+			<i class='bx bx-search' ></i>
+			<input type="text" placeholder="Rechercher">
+			<span class="tooltip">Rechercher</span>
+		</li>
+		<li>
+			<a href="index.html">
+			<i class='bx bx-home'></i>
+			<span class="links_name">Accueil</span>
+			</a>
+			<span class="tooltip">Accueil</span>
+		</li>
+		<li>
+			<a href="manga.html">
+			<i class='bx bx-book' ></i>
+			<span class="links_name">Manga</span>
+			</a>
+			<span class="tooltip">Manga</span>
+		</li>
+		<li>
+			<a href="jeu.html">
+			<i class='bx bx-joystick' ></i>
+			<span class="links_name">Jeu</span>
+			</a>
+			<span class="tooltip">Jeu</span>
+		</li>
+		<li>
+			<a href="reste.html#personnages">
+			<i class='bx bx-user' ></i>
+			<span class="links_name">Personnages</span>
+			</a>
+			<span class="tooltip">Personnages</span>
+		</li>
+		<li>
+			<a href="reste.html#monde">
+			<i class='bx bx-world' ></i>
+			<span class="links_name">Monde</span>
+			</a>
+			<span class="tooltip">Monde</span>
+		</li>
+		<li>
+			<a href="reste.html#creatures">
+			<i class='bx bx-ghost' ></i>
+			<span class="links_name">Créatures</span>
+			</a>
+			<span class="tooltip">Créatures</span>
+		</li>
+		<li onclick="toggle();">
+			<a href='#'>
+			<i class='bx bx-cog' ></i>
+			<span class="links_name">Paramètres</span>
+			</a>
+			<span class="tooltip">Paramètres</span>
+		</li>
+		<li class="download">
+			<div class="download-details">
+				<div class="name_job">
+					<div class="name">Télécharger</div>
+					<div class="job">60 Mo</div>
+				</div>
+			</div>
+			<i class='bx bx-download' id="log_out" ></i>
+		</li>
+    </ul>
+</div>
+
+
+<section class="home-section">              <!--Contenu a droite du menu-->
+	
+	<div class='settings'>                        <!--Pop up paramètre  /  z-index = 3-->
+		<ul>
+			<li onclick="changeClass();">
+				<a href='#' id="micro">
+				<i class='bx bx-microphone-off'></i>
+				</a>
+				<audio id="musique">
+					<source src="Musiques/luffy.mp3" type="audio/mp3">
+				</audio>
+			</li>
+			<li onclick="ChangeStyle();">
+				<a href='#' id="theme">
+				<i class='bx bx-toggle-right'></i>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	
+	<img id="background" src="https://makito1.github.io/Image/fond_zelda.jpg">
+
+	<div class="title-page">Jeu</div>
+	
+	<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/gEOI-Ae_aaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<div class="box">
+	<div class="fonctionnalite"><h1>Fonctionnalités du jeu</h1></div>
+		<div class="sous-box">
+			<div class="phrase">
+			<h2>Jeu de tir explosif</h2><br>
+			<p>Visez haut ou pas trop, changez d’arme et équipez-vous de gadgets mortels, puis mettez-vous à couvert et utilisez les environnements destructibles à votre avantage.</p>
+			</div>
+			<div class="image">
+			<img src='https://compass-ssl.xbox.com/assets/77/0c/770ca489-6fee-447a-9910-087ebead73fb.jpg?n=The-Ascent_Gallery_0_1350x759_10.jpg'>
+			</div>
+		</div>
+	
+		<div class="sous-box">
+			<div class="image">
+			<img src='https://compass-ssl.xbox.com/assets/95/85/9585f2ef-93b3-42bb-906e-ec2b7de333c3.jpg?n=The-Ascent_Gallery_0_1350x759_09.jpg'>
+			</div>
+			<div class="phrase">
+			<h2>Éléments RPG</h2><br>
+			<p>Personnalisez votre personnage avec un cyberware qui convient à votre style de jeu. Attribuez-lui de nouveaux points de compétence à mesure que votre niveau augmente.</p>
+			</div>
+		</div>
+	
+		<div class="sous-box">
+			<div class="phrase">
+			<h2>Solo ou coopératif</h2><br>
+			<p>Jouez seul, du début à la fin du jeu, ou jouez en coopération en local ou en ligne avec trois amis maximum.</p>
+			</div>
+			<div class="image">
+			<img src='https://compass-ssl.xbox.com/assets/40/a8/40a87a83-1301-48cf-8754-a86aea845dbb.jpg?n=The-Ascent_Feature-Image-Priority-Full-Width-0_Co-op_1248x702.jpg'>
+			</div>
+		</div>
+	</div>
+	
+	<footer>                               <!--Footer  /  debut a 800px-->
+		<div class='footer-content'>
+			<h3>Makito</h3><br>
+			<p>Nous vous attendions, bienvenue sur le site officiel de Neytiri</p><br>
+			<ul class='socials'>
+				<li><a href='#'><i class="bx bxl-facebook-circle"></i></a></li>
+				<li><a href='#'><i class="bx bxl-twitter"></i></a></li>
+				<li><a href='#'><i class="bx bxl-discord"></i></a></li>
+				<li><a href='#'><i class="bx bxl-youtube"></i></a></li>
+				<li><a href='#'><i class="bx bxl-instagram-alt"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+		<P>copyright &copy;2021 Makito.designed by <span>mathieu</span></P>
+		</div>
+		<style>
+		footer{top: 230%;}
+		@media (min-height: 1080px) {
+		footer{top: 224%;}
+		}
+		</style>
+	</footer>
+
+	
+</section>
+
+<script type="text/javascript" src="Javascript/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Partie Manga */
+.grille {
+	position: absolute;
+	top: 10%;
+	left: 14.5%;
+	max-width: 1300px;
+	width: 80%;
+	height: auto;
+	margin: 30px auto;
+	display: grid;
+    grid-template-columns: repeat(auto-fill,350px);
+    justify-content: center;
+    grid-gap: 20px;
+}
+.chapter{
+	border-radius: 5px;
+	background: #11101d;
+}
+.chapter img{
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+	height: auto;
+}
+.chapter p{
+	color: #fff;
+}

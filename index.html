@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Image/logo_N.png" type="images/x-icon"/>
+  <title>Neytiri-Accueil</title>
+  <link rel="stylesheet" href="styletest.css" id="linkStyle">
+  <link rel="stylesheet" href="CSS/index.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="CSS/loader.css">   <!--animation de chargement-->
+</head>
+
+<body>
+	<style>body{background: url(Image/4.jpg)}</style>
+
+<div class="loader">                   <!--animation de chargement  /  z-index = 4-->
+	<span class="lettre">C</span>
+	<span class="lettre">H</span>
+	<span class="lettre">A</span>
+	<span class="lettre">R</span>
+	<span class="lettre">G</span>
+	<span class="lettre">E</span>
+	<span class="lettre">M</span>
+	<span class="lettre">E</span>
+	<span class="lettre">M</span>
+	<span class="lettre">T</span>
+	<script>
+	const loader = document.querySelector('.loader');
+
+	window.addEventListener('load', () => {
+		
+		loader.classList.add('fondu-out');
+		loader.style.display = 'none';
+		
+	})
+	</script>
+</div>
+
+
+<div class="sidebar">                     <!--menu vertical  /  z-index = 3-->
+    <div class="logo-details">
+		<i class='bx bx-smile icon'></i>
+			<div class="logo_name">NEYTIRI</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+		<li>
+			<i class='bx bx-search' ></i>
+			<input type="text" placeholder="Rechercher">
+			<span class="tooltip">Rechercher</span>
+		</li>
+		<li>
+			<a href="index.html">
+			<i class='bx bx-home'></i>
+			<span class="links_name">Accueil</span>
+			</a>
+			<span class="tooltip">Accueil</span>
+		</li>
+		<li>
+			<a href="manga.html">
+			<i class='bx bx-book' ></i>
+			<span class="links_name">Manga</span>
+			</a>
+			<span class="tooltip">Manga</span>
+		</li>
+		<li>
+			<a href="jeu.html">
+			<i class='bx bx-joystick' ></i>
+			<span class="links_name">Jeu</span>
+			</a>
+			<span class="tooltip">Jeu</span>
+		</li>
+		<li>
+			<a href="reste.html#personnages">
+			<i class='bx bx-user' ></i>
+			<span class="links_name">Personnages</span>
+			</a>
+			<span class="tooltip">Personnages</span>
+		</li>
+		<li>
+			<a href="reste.html#monde">
+			<i class='bx bx-world' ></i>
+			<span class="links_name">Monde</span>
+			</a>
+			<span class="tooltip">Monde</span>
+		</li>
+		<li>
+			<a href="reste.html#creatures">
+			<i class='bx bx-ghost' ></i>
+			<span class="links_name">Créatures</span>
+			</a>
+			<span class="tooltip">Créatures</span>
+		</li>
+		<li onclick="toggle();">
+			<a href='#'>
+			<i class='bx bx-cog' ></i>
+			<span class="links_name">Paramètres</span>
+			</a>
+			<span class="tooltip">Paramètres</span>
+		</li>
+		<li class="download">
+			<div class="download-details">
+				<div class="name_job">
+					<div class="name">Télécharger</div>
+					<div class="job">60 Mo</div>
+				</div>
+			</div>
+			<i class='bx bx-download' id="log_out" ></i>
+		</li>
+    </ul>
+</div>
+
+
+<section class="home-section">              <!--Contenu a droite du menu  /  z-index = 2-->
+
+	<div class='settings'>                        <!--Pop up paramètre  /  z-index = 3-->
+		<ul>
+			<li onclick="changeClass();">
+				<a href='#' id="micro">
+				<i class='bx bx-microphone-off'></i>
+				</a>
+				<audio id="musique">
+					<source src="Musiques/touch.mp3" type="audio/mp3">
+				</audio>
+			</li>
+			<li onclick="ChangeStyle();">
+				<a href='#' id="theme">
+				<i class='bx bx-toggle-right'></i>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+
+	<img id="background" name="img" src="1.png">
+	<input type="button" class="button-next" value=">" OnClick="affiche(i+1)">
+	
+	<div class="title-page">Accueil</div>
+	
+	<input type="button" class="button-news" value="Actualités" OnClick="actu()">
+	
+	<div class="news">
+		<div class="news-left">
+			<img src='https://th.bing.com/th/id/R.c62e9c8286ba3e33b46a3bf652bbd4cc?rik=Uu85LrVutVHywQ&pid=ImgRaw&r=0'>
+		</div>
+		<div class="news-right">
+			<ul class="news-head">
+				<li class="news-head-item">
+				Actualités
+				</li>
+			</ul>
+			<ul class="news-list">
+				<li>
+					<a class="news-item">
+						<p class="news-title ellipsis">Deuxième chapitre de l'odyssé de Neytiri disponible</p>
+						<p class='news-date'>18/10/2021</p>
+					</a>
+				</li>
+				<li>
+					<a class="news-item">
+						<p class="news-title ellipsis">Informations sur les produits dérivés du concert hors ligne de Genshin Impact - Partie II</p>
+						<p class='news-date'>14/04/2021</p>
+					</a>
+				</li>
+				<li>
+					<a class="news-item">
+						<p class="news-title ellipsis">Bonne nouvelle un nouveau Jeu vous attend</p>
+						<p class='news-date'>20/03/2021</p>
+					</a>
+				</li>
+				<li>
+					<a class="news-item">
+						<p class="news-title ellipsis">Premier chapitre de l'odyssé de Neytiri disponible</p>
+						<p class='news-date'>07/01/2021</p>
+					</a>
+				</li>
+				<li>
+					<a class="news-item">
+						<p class="news-title ellipsis">Nous vous attendions, bienvenue sur le site officiel de Neytiri</p>
+						<p class='news-date'>01/01/2021</p>
+					</a>
+				</li>
+			</ul>
+		</div>		
+	</div>
+	
+	
+	<footer>                               <!--Footer  /  debut a 800px-->
+		<div class='footer-content'>
+			<h3>Makito</h3><br>
+			<p>Nous vous attendions, bienvenue sur le site officiel de Neytiri</p><br>
+			<ul class='socials'>
+				<li><a href='#'><i class="bx bxl-facebook-circle"></i></a></li>
+				<li><a href='#'><i class="bx bxl-twitter"></i></a></li>
+				<li><a href='#'><i class="bx bxl-discord"></i></a></li>
+				<li><a href='#'><i class="bx bxl-youtube"></i></a></li>
+				<li><a href='#'><i class="bx bxl-instagram-alt"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+		<P>copyright &copy;2021 Makito.designed by <span>mathieu</span></P>
+		</div>
+		<style>
+		footer{top: 100%;}
+		</style>
+	</footer>
+ 
+	
+</section>
+
+<script type="text/javascript" src="Javascript/main.js"></script>
+
+</body>
+</html>

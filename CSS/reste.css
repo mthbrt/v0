@@ -1,0 +1,41 @@
+/* Partie Perso Region Créatures */
+body{
+	background: lightgreen;
+}
+.perso, .world, .mobs{
+	position:relative;
+	left: 14%;
+	padding-bottom: 40px;
+    width: 70.5%;
+	height: auto;
+    background: #11101d;
+	border-radius: 15px;
+    color: #fff;
+	margin-top: 8vh;
+	margin-bottom: 2vh;
+	padding-top: 10px;
+}
+.title-part h2{       /* définit le titre et son placement dans la zone section */
+	left: 5%;
+}
+.caractere{
+	height: 200px;
+	width: 100%;
+}
+.world {
+  grid-template-columns: 1;
+  justify-content: center;
+}
+.all-region{
+	background: rgba(255,255,255,0.5);
+}
+.region img{
+	width: 100%;
+	height: 200px;
+}
+.region p{
+	color: #fff;
+}
+.phrase{
+	padding: 30px;
+}

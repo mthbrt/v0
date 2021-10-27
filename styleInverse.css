@@ -1,0 +1,438 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+ul, li{
+	list-style:none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Barre de navigation ordinateur*/
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #fff;
+  padding: 6px 14px;
+  z-index: 3;                    /*sidebar au dessus de tout*/
+  transition: all 0.5s ease;
+}
+.sidebar.open{    /*largeur de la barre de nav déplier */
+  width: 250px;
+}
+.sidebar .logo-details{   /*logo en haut de la barre de nav*/
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #11101d;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,       /* logo en haut de la barre de nav déplier */
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{        /* lien icon dans la barre de nav */
+  color: #11101d;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{          /* bouton rechercher*/
+  font-size: 15px;
+  color: #11101d;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #dcdcdc;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #dcdcdc;
+  color: #11101d;
+}
+.sidebar.open .bx-search:hover{
+  background: #dcdcdc;
+  color: #11101d;
+}
+.sidebar .bx-search:hover{
+  background: #11101d;
+  color: #fff;
+}
+.sidebar li a{    /* lien icon dans la barre de nav */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  transition: all 0.4s ease;
+  background: #fff;
+}
+.sidebar li a:hover{
+  background: #11101d;
+}
+.sidebar li a .links_name{
+  color: #11101d;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.download{       /* lien télécharger dans la barre de nav */
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #dcdcdc;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.download{
+  width: 250px;
+}
+.sidebar li .download-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.download .name,
+.sidebar li.download .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #11101d;
+  white-space: nowrap;
+}
+.sidebar li.download .job{
+  font-size: 12px;
+}
+.sidebar .download #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #dcdcdc;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .download #log_out{
+  width: 50px;
+  background: none;
+}
+
+/* translation de la zone section au déploiment de la barre nav */
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* adaptation du menu */
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+/* Section */
+.home-section{
+	position: relative;
+	min-height: 100vh;
+	top: 0;
+	left: 78px;
+	width: calc(100% - 78px);
+	transition: all 0.5s ease;
+	z-index: 2;
+}
+.title-page{                       /* définit le titre et son placement dans la zone section */
+	display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+	position: absolute;
+	left:0;
+	margin: 18px;
+	color: #fff;
+}
+#background{      /* définit l'image de fond de la zone section */
+	position:fixed;
+	top:0px;
+	height:100%;
+	width:100%;
+}
+.button-next {                   /* définit le bouton image suivante */
+	top: 40%;
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 10px;
+	border:none;
+	color: #11101d;
+	text-align: center;
+	font-size: 40px;
+	height: 100px;
+	width: 50px;
+	cursor: pointer;
+	position:absolute;
+	right: 20px;
+}
+.button-next:hover{
+	transition: all 0.4s ease;
+	background-color: #11101d;
+	color: #fff;
+}
+
+/* Bouton actualités */
+.button-news{
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  color: #11101d;
+  border: none;
+  border-radius: 10px 10px;
+  font-size: 30px;
+  height: 50px;
+  width: 190px;
+}
+.button-news:hover{
+  transition: all 0.4s ease;
+  background-color: #11101d;
+  color: #fff;
+}
+
+/* Paramètres (song et theme) */
+.settings {
+	height: 130px;
+	width: 62px;
+	background-color: #fff;
+	border-radius: 10px 10px;
+	position: absolute;
+	top: 482px;
+	visibility:hidden;
+	left: 10px;
+	z-index: 3;
+}
+.settings li i {
+    height: 50px;
+	width: 50px;
+	line-height: 50px;
+	text-align: center;
+    border-radius: 12px;
+	font-size: 22px;
+	background: #fff;
+}
+.settings li a:hover , .settings li a:hover i {
+    transition: all 0.4s ease;
+    color: #fff;
+	background-color: #11101d;
+}
+.settings .bx-microphone{
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  color: #11101d;
+}
+.settings .bx-toggle-right{
+  position: absolute;
+  top: 53%;
+  left: 10%;
+  color: #11101d;
+}
+.settings .bx-microphone-off{
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  color: #11101d;
+}
+.settings .bx-toggle-left{
+  position: absolute;
+  top: 53%;
+  left: 10%;
+  color: #11101d;
+}
+.settings.active{
+	visibility:visible;
+	opacity:1;
+}
+
+ /*footer*/
+footer {
+  padding-top: 40px;
+  border-radius: 20px 20px 0px 0px;
+  margin: 1.5%;
+  position: absolute;
+  height: auto;
+  width: 96.8%;
+  background-color: #fff;
+  color: #11101d;
+}
+.footer-content {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.footer-content h3 {
+	font-size: 3rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	line-height: 3rem;
+}
+.footer-content p {
+	max-width: 500px;
+	margin: 10px auto;
+	line-height: 28px;
+	font-size: 16px;
+}
+.socials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+	
+}
+.socials li{
+	margin: 0 10px;	
+}
+.socials a{
+	color: #11101d;
+}
+.socials a i{
+	font-size: 2rem;
+	transition: color 0.4s ease;
+}
+.socials a:hover i{
+	color: aqua;
+}
+.footer-bottom {
+	background: #dcdcdc;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+.footer-bottom p {
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+}
+.footer-bottom span {
+	text-transform: uppercase;
+	opacity: .8;
+	font-weight: 200;
+}
+
+/*la scrollbar*/
+ ::-webkit-scrollbar {  /*permet de modifier le style de la scrollbar*/
+    width: 6px;  /*definit la longeur (l'epaisseur) de la scrollbar*/
+ }
+ ::-webkit-scrollbar-thumb {
+    background: #11101d;  /*definit la couleur du fond*/
+    border-radius: 5px;  /*definit la taille de l'arrondissement des coins*/
+}

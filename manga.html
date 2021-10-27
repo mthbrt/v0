@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Image/logo_N.png" type="images/x-icon"/>
+  <title>Neytiri-Manga</title>
+  <link rel="stylesheet" href="styletest.css" id="linkStyle">
+  <link rel="stylesheet" href="CSS/manga.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="CSS/loader.css">   <!--animation de chargement-->
+</head>
+
+<body>
+<div class="sidebar">                     <!--menu vertical-->
+    <div class="logo-details">
+		<i class='bx bx-smile icon'></i>
+			<div class="logo_name">NEYTIRI</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+		<li>
+			<i class='bx bx-search' ></i>
+			<input type="text" placeholder="Rechercher">
+			<span class="tooltip">Rechercher</span>
+		</li>
+		<li>
+			<a href="index.html">
+			<i class='bx bx-home'></i>
+			<span class="links_name">Accueil</span>
+			</a>
+			<span class="tooltip">Accueil</span>
+		</li>
+		<li>
+			<a href="manga.html">
+			<i class='bx bx-book' ></i>
+			<span class="links_name">Manga</span>
+			</a>
+			<span class="tooltip">Manga</span>
+		</li>
+		<li>
+			<a href="jeu.html">
+			<i class='bx bx-joystick' ></i>
+			<span class="links_name">Jeu</span>
+			</a>
+			<span class="tooltip">Jeu</span>
+		</li>
+		<li>
+			<a href="reste.html#personnages">
+			<i class='bx bx-user' ></i>
+			<span class="links_name">Personnages</span>
+			</a>
+			<span class="tooltip">Personnages</span>
+		</li>
+		<li>
+			<a href="reste.html#monde">
+			<i class='bx bx-world' ></i>
+			<span class="links_name">Monde</span>
+			</a>
+			<span class="tooltip">Monde</span>
+		</li>
+		<li>
+			<a href="reste.html#creatures">
+			<i class='bx bx-ghost' ></i>
+			<span class="links_name">Créatures</span>
+			</a>
+			<span class="tooltip">Créatures</span>
+		</li>
+		<li onclick="toggle();">
+			<a href='#'>
+			<i class='bx bx-cog' ></i>
+			<span class="links_name">Paramètres</span>
+			</a>
+			<span class="tooltip">Paramètres</span>
+		</li>
+		<li class="download">
+			<div class="download-details">
+				<div class="name_job">
+					<div class="name">Télécharger</div>
+					<div class="job">60 Mo</div>
+				</div>
+			</div>
+			<i class='bx bx-download' id="log_out" ></i>
+		</li>
+    </ul>
+</div>
+
+
+<section class="home-section">              <!--Contenu a droite du menu-->
+	
+	
+		<div class='settings'>                        <!--Pop up paramètre  /  z-index = 3-->
+		<ul>
+			<li onclick="changeClass();">
+				<a href='#' id="micro">
+				<i class='bx bx-microphone-off'></i>
+				</a>
+				<audio id="musique">
+					<source src="Musiques/One_life.mp3" type="audio/mp3">
+				</audio>
+			</li>
+			<li onclick="ChangeStyle();">
+				<a href='#' id="theme">
+				<i class='bx bx-toggle-right'></i>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	<img id="background" src="Image/4.jpg">
+	
+	<div class="title-page">Manga</div>
+	
+	<div class="grille">
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190903/2019090314530331649.jpg"><p>Chapitre 1:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315422222897.jpg"><p>Chapitre 2:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20190923/2019092315452396673.jpg"><p>Chapitre 3:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100910434141950.jpg"><p>Chapitre 4:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100910474288348.jpg"><p>Chapitre 5:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100911452368463.jpg"><p>Chapitre 6:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="Image/nodispo.jpg"><p>Chapitre 7:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="Image/nodispo.jpg"><p>Chapitre 8:_____</p></a></div>
+		<div class="chapter"><a href=""><img src="Image/nodispo.jpg"><p>Chapitre 9:_____</p></a></div>
+	</div>
+ 
+	<footer>                               <!--Footer  /  debut a 800px-->
+		<div class='footer-content'>
+			<h3>Makito</h3><br>
+			<p>Nous vous attendions, bienvenue sur le site officiel de Neytiri</p><br>
+			<ul class='socials'>
+				<li><a href='#'><i class="bx bxl-facebook-circle"></i></a></li>
+				<li><a href='#'><i class="bx bxl-twitter"></i></a></li>
+				<li><a href='#'><i class="bx bxl-discord"></i></a></li>
+				<li><a href='#'><i class="bx bxl-youtube"></i></a></li>
+				<li><a href='#'><i class="bx bxl-instagram-alt"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+		<P>copyright &copy;2021 Makito.designed by <span>mathieu</span></P>
+		</div>
+		<style>
+		footer{top: 100%;}
+		</style>
+	</footer>
+ 
+ 
+</section>
+
+<script type="text/javascript" src="Javascript/main.js"></script>
+  
+</body>
+</html>

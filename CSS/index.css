@@ -1,0 +1,120 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+/* Actualité*/
+.news{
+	position:absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 2.5vw;
+    width: 75%;
+	height: 55%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    background: url('https://genshin.mihoyo.com/_nuxt/img/29770c4.jpg');
+	border-radius: 15px;
+	visibility: hidden;
+}
+.news.active{
+	visibility: visible;
+	opacity: 1;
+}
+.news-right, .news-left {
+	width: 50%;
+	height: 100%;
+	min-width: 450px;
+    background: rgba(38,18,12,0.62);
+}
+.news-left img{
+    width: 100%;
+	height: 100%;
+}
+.news-list {
+    display: flex;
+    margin: 35px auto 0;
+}
+.news ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 2vw;
+}
+.news-head-item {
+    color: #ffd49f;
+    position: relative;
+    font-size: 150%;
+    cursor: pointer;
+}
+.news-head-item::after {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    display: block;
+    content: '';
+    width: 93%;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+}
+.news-list {
+    width: 112%;
+    margin: 0 auto;
+}
+.news-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: 50px;
+    border-bottom: 2px solid rgba(255,255,255,0.08);
+    box-sizing: content-box;
+    font-size: 110%;
+    color: #fff;
+}
+.news-title {
+    width: 140%;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 11px;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.news-date {
+    position: relative;
+    right: 0px;
+    color: rgba(255,255,255,0.35);
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+@media (max-width: 1200px) {
+	.news{
+		height: auto;
+	}
+	.news-right, .news-left{
+		flex-grow: 1;
+	}
+	.button-news{
+		top: 92%;
+	}
+}
+@media (max-width: 650) {
+	.news{
+		width: auto;
+	}
+	.news-right, .news-left{
+		width: 75%;
+	}
+}
