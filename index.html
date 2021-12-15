@@ -8,11 +8,9 @@
   <link rel="stylesheet" href="styletest.css" id="linkStyle">
   <link rel="stylesheet" href="CSS/index.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="CSS/loader.css">   <!--animation de chargement-->
+  <link rel="stylesheet" href="loader.css">   <!--animation de chargement-->
 </head>
-
 <body>
-	<style>body{background: url(Image/4.jpg)}</style>
 
 <div class="loader">                   <!--animation de chargement  /  z-index = 4-->
 	<span class="lettre">C</span>
@@ -36,7 +34,6 @@
 	})
 	</script>
 </div>
-
 
 <div class="sidebar">                     <!--menu vertical  /  z-index = 3-->
     <div class="logo-details">
@@ -110,9 +107,7 @@
 		</li>
     </ul>
 </div>
-
-
-<section class="home-section">              <!--Contenu a droite du menu  /  z-index = 2-->
+             <!--Contenu a droite du menu  /  z-index = 2-->
 
 	<div class='settings'>                        <!--Pop up paramètre  /  z-index = 3-->
 		<ul>
@@ -121,7 +116,7 @@
 				<i class='bx bx-microphone-off'></i>
 				</a>
 				<audio id="musique">
-					<source src="Musiques/Touch.mp3" type="audio/mp3">
+					<source src="touch.mp3" type="audio/mp3">
 				</audio>
 			</li>
 			<li onclick="ChangeStyle();">
@@ -132,64 +127,91 @@
 		</ul>
 	</div>
 	
+<section>
 
-	<img id="background" name="img" src="1.png">
-	<input type="button" class="button-next" value=">" OnClick="affiche(i+1)">
+	<main>
+		<div class='diapo' data-speed="10000" data-transition="500">
+		
+			<div class='elements'>
+				<div class='element'>
+					<img src="Images/1.png" alt='Image1'>
+				</div>
+				<div class='element'>
+					<img src="Images/2.png" alt='Image2'>
+				</div>
+				<div class='element'>
+					<img src="Images/3.png" alt='Image3'>
+				</div>
+			</div>
+			<!--Flèches-->
+			<input type="button" id='nav-gauche' value="<">
+			<input type="button" id='nav-droite' value=">">
+		</div>
+	</main>
 	
 	<div class="title-page">Accueil</div>
-	
-	<input type="button" class="button-news" value="Actualités" OnClick="actu()">
-	
-	<div class="news">
-		<div class="news-left">
-			<img src='https://th.bing.com/th/id/R.c62e9c8286ba3e33b46a3bf652bbd4cc?rik=Uu85LrVutVHywQ&pid=ImgRaw&r=0'>
+
+	<div class='secondary'>
+		<div class="news">
+			<div class="news-left">
+				<main>
+					<div class='diapo' data-speed="10000" data-transition="500">
+					
+						<div class='elements'>
+							<div class='element'>
+								<img src="Images/Fu_Hua.png" alt='Fu_Hua'>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="news-right">
+				<ul class="news-head">
+					<li class="news-head-item">
+					Actualités
+					</li>
+				</ul>
+				<ul class="news-list">
+					<li>
+						<a class="news-item">
+							<p class="news-title ellipsis">Deuxième chapitre de l'odyssé de Neytiri disponible</p>
+							<p class='news-date'>18/10/2021</p>
+						</a>
+					</li>
+					<li>
+						<a class="news-item">
+							<p class="news-title ellipsis">Informations sur les produits dérivés du concert hors ligne de Genshin Impact - Partie II</p>
+							<p class='news-date'>14/04/2021</p>
+						</a>
+					</li>
+					<li>
+						<a class="news-item">
+							<p class="news-title ellipsis">Bonne nouvelle un nouveau Jeu vous attend</p>
+							<p class='news-date'>20/03/2021</p>
+						</a>
+					</li>
+					<li>
+						<a class="news-item">
+							<p class="news-title ellipsis">Premier chapitre de l'odyssé de Neytiri disponible</p>
+							<p class='news-date'>07/01/2021</p>
+						</a>
+					</li>
+					<li>
+						<a class="news-item">
+							<p class="news-title ellipsis">Nous vous attendions, bienvenue sur le site officiel de Neytiri</p>
+							<p class='news-date'>01/01/2021</p>
+						</a>
+					</li>
+				</ul>
+			</div>		
 		</div>
-		<div class="news-right">
-			<ul class="news-head">
-				<li class="news-head-item">
-				Actualités
-				</li>
-			</ul>
-			<ul class="news-list">
-				<li>
-					<a class="news-item">
-						<p class="news-title ellipsis">Deuxième chapitre de l'odyssé de Neytiri disponible</p>
-						<p class='news-date'>18/10/2021</p>
-					</a>
-				</li>
-				<li>
-					<a class="news-item">
-						<p class="news-title ellipsis">Informations sur les produits dérivés du concert hors ligne de Genshin Impact - Partie II</p>
-						<p class='news-date'>14/04/2021</p>
-					</a>
-				</li>
-				<li>
-					<a class="news-item">
-						<p class="news-title ellipsis">Bonne nouvelle un nouveau Jeu vous attend</p>
-						<p class='news-date'>20/03/2021</p>
-					</a>
-				</li>
-				<li>
-					<a class="news-item">
-						<p class="news-title ellipsis">Premier chapitre de l'odyssé de Neytiri disponible</p>
-						<p class='news-date'>07/01/2021</p>
-					</a>
-				</li>
-				<li>
-					<a class="news-item">
-						<p class="news-title ellipsis">Nous vous attendions, bienvenue sur le site officiel de Neytiri</p>
-						<p class='news-date'>01/01/2021</p>
-					</a>
-				</li>
-			</ul>
-		</div>		
 	</div>
-	
-	
-	<footer>                               <!--Footer  /  debut a 800px-->
+
+
+	<footer>              	<!--Footer /  debut a 800px-->
 		<div class='footer-content'>
 			<h3>Makito</h3><br>
-			<p>Nous vous attendions, bienvenue sur le site officiel de Neytiri</p><br>
+			<p>Bienvenue sur le site officiel de Neytiri</p><br>
 			<ul class='socials'>
 				<li><a href='#'><i class="bx bxl-facebook-circle"></i></a></li>
 				<li><a href='#'><i class="bx bxl-twitter"></i></a></li>
@@ -201,15 +223,11 @@
 		<div class="footer-bottom">
 		<P>copyright &copy;2021 Makito.designed by <span>mathieu</span></P>
 		</div>
-		<style>
-		footer{top: 100%;}
-		</style>
 	</footer>
- 
-	
+
 </section>
 
-<script type="text/javascript" src="Javascript/main.js"></script>
+<script type="text/javascript" src="main.js" defer></script>
 
 </body>
 </html>

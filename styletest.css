@@ -1,5 +1,3 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -230,7 +228,7 @@ a {
 }
 
 /* translation de la zone section au déploiment de la barre nav */
-.sidebar.open ~ .home-section{
+.sidebar.open ~ section{
   left: 250px;
   width: calc(100% - 250px);
 }
@@ -243,70 +241,31 @@ a {
 }
 
 /* Section */
-.home-section{
-	position: relative;
-	min-height: 100vh;
-	top: 0;
-	left: 78px;
-	width: calc(100% - 78px);
-	transition: all 0.5s ease;
-	z-index: 2;
+section {
+  transition: all 0.5s ease;
+  position: relative;
+  left: 78px;
+  width: calc(100% - 78px);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: black;
+  z-index: 2;
 }
 .title-page{                       /* définit le titre et son placement dans la zone section */
 	display: inline-block;
-    font-size: 25px;
+    font-size: 25px /*2.5vw*/;
     font-weight: 500;
 	position: absolute;
+	top:0;
 	left:0;
 	margin: 18px;
 	color: #fff;
 }
-#background{      /* définit l'image de fond de la zone section */
-	position:fixed;
-	top:0px;
-	height:100%;
-	width:100%;
-}
-.button-next {                   /* définit le bouton image suivante */
-	top: 40%;
-	display: inline-block;
-	background-color: #11101d;
-	border-radius: 10px;
-	border:none;
-	color: #fff;
-	text-align: center;
-	font-size: 40px;
-	height: 100px;
-	width: 50px;
-	cursor: pointer;
-	position:absolute;
-	right: 20px;
-}
-.button-next:hover{
-	transition: all 0.4s ease;
-	background-color: #fff;
-	color: #11101d;
-}
 
-/* Bouton actualités */
-.button-news{
-  position: absolute;
-  top: 78%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: #11101d;
-  color: #fff;
-  border: none;
-  border-radius: 10px 10px;
-  font-size: 30px;
-  height: 50px;
-  width: 190px;
-}
-.button-news:hover{
-  transition: all 0.4s ease;
-  background-color: #fff;
-  color: #11101d;
-}
 /* Paramètres (song et theme) */
 .settings {
 	height: 130px;
@@ -316,7 +275,7 @@ a {
 	position: absolute;
 	top: 482px;
 	visibility:hidden;
-	left: 10px;
+	left: 88px;
 	z-index: 3;
 }
 .settings li i {
@@ -362,14 +321,11 @@ a {
 	opacity:1;
 }
 
- /*footer*/
+/* footer */
 footer {
   padding-top: 40px;
-  border-radius: 20px 20px 0px 0px;
-  margin: 1.5%;
-  position: absolute;
   height: auto;
-  width: 96.8%;
+  width: 100%;
   background-color: #11101d;
   color: #fff;
 }
@@ -413,7 +369,7 @@ footer {
 .footer-bottom {
 	background: #1d1b31;
 	width: 100%;
-	padding: 20px 0;
+	padding: 22px 0;
 	text-align: center;
 }
 .footer-bottom p {
@@ -427,11 +383,11 @@ footer {
 	font-weight: 200;
 }
 
+
 /*la scrollbar*/
  ::-webkit-scrollbar {  /*permet de modifier le style de la scrollbar*/
     width: 6px;  /*definit la longeur (l'epaisseur) de la scrollbar*/
  }
  ::-webkit-scrollbar-thumb {
     background: #1d1b31;  /*definit la couleur du fond*/
-    border-radius: 5px;  /*definit la taille de l'arrondissement des coins*/
 }
