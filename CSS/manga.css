@@ -1,26 +1,33 @@
 /* Partie Manga */
 .grille {
-	position: absolute;
-	top: 10%;
-	left: 14.5%;
-	max-width: 1300px;
-	width: 80%;
-	height: auto;
-	margin: 30px auto;
+	padding: 15vh 0;
 	display: grid;
-    grid-template-columns: repeat(auto-fill,350px);
+    grid-template-columns: repeat(auto-fill,380px);
     justify-content: center;
     grid-gap: 20px;
+	background-image: url(../Image/4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .chapter{
 	border-radius: 5px;
-	background: #11101d;
 }
 .chapter img{
-	border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 5px 0;
 	width: 100%;
 	height: auto;
 }
 .chapter p{
 	color: #fff;
+}
+.chapter:hover {
+	transform: scale(1.05);
+	transition: all 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+  .grille {
+    grid-template-columns: repeat(auto-fill,75%);
+  }
 }

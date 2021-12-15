@@ -249,10 +249,6 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: black;
   z-index: 2;
 }
 .title-page{                       /* définit le titre et son placement dans la zone section */
